@@ -12,20 +12,21 @@
 }
 
 #navbar {
-    width: inherit;  /* COME FUNZIONA? */
     padding: 2px 0;
     align-items: center;
     justify-content: center;
 }
 
 #navbar > *:not(#hero) {
+    display: flex;
     align-items: center;
-    padding: 15px 10px;
+    padding: 0 10px;
     min-height: 43px;
     margin: 16px 0;
 }
 
-.logo {
+.logo, .login {
+    justify-content: flex-start;
     max-width: 100px;
     flex-grow: 1;
 }
@@ -33,26 +34,28 @@
 .link {
     max-width: 300px;
     flex-grow: 3;
-    text-align: center;
+    justify-content: center;
 }
 
 .login {
-    max-width: 100px;
-    flex-grow: 1;
-    text-align: right;
+    justify-content: flex-end;
 }
 
 #hero {
+    min-height: 400px;
     justify-content: center;
     align-items: center;
-    padding: calc(5% - 10px);
+    max-height: 100%;
 }
 
 #hero > * {
     display: flex;
     align-items: center;
-    width: 40%;
-    height: 200px;
+    min-width: 400px;
+    min-height: 200px;
+    justify-content: center;
+   /* width: inherit;
+    height: inherit; */
 }
 
 .column-left {
