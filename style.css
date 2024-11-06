@@ -1,0 +1,90 @@
+* { /**/
+    box-sizing: border-box; /*determina che i margini ed i padding mantengano la altezza e lunghezza da noi impostata (al contenitore) */
+    margin: 0;
+    padding: 0;
+}
+
+.flexbox {
+    width: 100%;
+    display: flex;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+#navbar {
+    width: inherit;  /* COME FUNZIONA? */
+    padding: 2px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar > *:not(#hero) {
+    align-items: center;
+    padding: 15px 10px;
+    min-height: 43px;
+    margin: 16px 0;
+}
+
+.logo {
+    max-width: 100px;
+    flex-grow: 1;
+}
+
+.link {
+    max-width: 300px;
+    flex-grow: 3;
+    text-align: center;
+}
+
+.login {
+    max-width: 100px;
+    flex-grow: 1;
+    text-align: right;
+}
+
+#hero {
+    justify-content: center;
+    align-items: center;
+    padding: calc(5% - 10px);
+}
+
+#hero > * {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    height: 200px;
+}
+
+.column-left {
+
+}
+
+.column-right {
+    
+}
+
+
+/**/
+
+body > header > #navbar {
+    background-color: #ADD8E6;
+}
+
+body > header > #navbar > *:not(#hero) {
+    background-color: #DAA520;
+}
+
+
+body > header > #navbar > * {
+    border: 2px dashed black;
+}
+
+
+body > header > #navbar > #hero{
+    background-color: #00008B;
+}
+
+body > header > #navbar > #hero > img:only-child {
+    background-color: #EE82EE;
+    border: 2px dotted black;
+}
