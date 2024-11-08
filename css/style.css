@@ -1,0 +1,137 @@
+* { /**/
+    box-sizing: border-box; /*determina che i margini ed i padding mantengano la altezza e lunghezza da noi impostata (al contenitore) */
+    margin: 0;
+    padding: 0;
+}
+
+.flexbox {
+    width: 100%;
+    display: flex;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+#navbar {
+    padding: 2px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar > *:not(#hero) {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    min-height: 43px;
+    margin: 16px 0;
+}
+
+.logo, .login {
+    justify-content: flex-start;
+    max-width: 100px;
+    flex-grow: 1;
+}
+
+.link {
+    max-width: 300px;
+    flex-grow: 3;
+    justify-content: center;
+}
+
+.login {
+    justify-content: flex-end;
+}
+
+#hero {
+    min-height: 400px;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+}
+
+#hero > * {
+    display: flex;
+    align-items: center;
+    min-width: 400px;
+    min-height: 200px;
+    justify-content: center;
+   /* width: inherit;
+    height: inherit; */
+}
+
+
+
+.section {
+    justify-content: center;
+    padding: 50px 0;
+    margin: auto;
+    min-height: 400px;
+}
+
+
+
+/* COLUMN LEFT */
+
+.column-left {
+    min-width: 20%;
+}
+
+
+
+/* COLUMN RIGHT */
+
+.column-right {
+    min-width: 40%;
+}
+
+.non-flexbox {
+    min-width: 60%;
+}
+
+/**/
+
+body > header > #navbar {
+    background-color: #ADD8E6;
+}
+
+body > header > #navbar > *:not(#hero) {
+    background-color: #DAA520;
+}
+
+
+body > header > #navbar > * {
+    border: 2px dashed black;
+}
+
+
+body > header > #navbar > #hero{
+    background-color: #00008B;
+}
+
+body > header > #navbar > #hero > img:only-child {
+    background-color: #EE82EE;
+    border: 2px dotted black;
+}
+
+
+
+/* MAIN */
+
+body > main > .section > * {
+    border: 2px dashed black;
+}
+
+body > main > .section:nth-of-type(2n + 2) {
+    background-color: #F6F6F6;
+}
+
+body > main > .section > .column-left {
+    background-color: #1E90FF;
+}
+
+body > main > .section > .column-right {
+    background-color: #FFC0CB;
+}
+
+body > main > .section > .non-flexbox {
+    background-color: #228B22;
+}
