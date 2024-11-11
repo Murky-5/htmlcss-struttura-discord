@@ -49,10 +49,12 @@
 }
 
 #hero > * {
+    min-height: max-content;
+    width: 100%;
     display: flex;
     align-items: center;
-    min-width: 400px;
-    min-height: 200px;
+    max-width: 400px;
+    height: 200px;
     justify-content: center;
    /* width: inherit;
     height: inherit; */
@@ -87,6 +89,61 @@
     min-width: 60%;
 }
 
+
+/* FOOTER */
+
+.footer * {
+    display: flex;
+    max-height: inherit;
+}
+
+.h {
+    height: 100%;
+    max-height: 500px;
+}
+
+.references_link {
+    flex-grow: 1;
+}
+
+.references {
+    flex-grow: 2;
+}
+
+.footer {
+    height: 500px;
+    flex-wrap: nowrap;
+    padding: 5px 0 40px 0;
+}
+
+.table {
+    flex-grow: 1;
+    height: inherit;
+}
+
+/* DEEPEST */
+
+section:last-child {
+    border-top: 1px solid;
+}
+
+.deepest {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 0;
+    margin-top: 25px;
+}
+
+
+.btn {
+    display: flex;
+    align-items: center;
+    padding: 7px 10px;
+    border: 0 none transparent;
+}
+
 /**/
 
 body > header > #navbar {
@@ -107,7 +164,7 @@ body > header > #navbar > #hero{
     background-color: #00008B;
 }
 
-body > header > #navbar > #hero > img:only-child {
+body > header > #navbar > #hero > div:only-child {
     background-color: #EE82EE;
     border: 2px dotted black;
 }
@@ -134,4 +191,39 @@ body > main > .section > .column-right {
 
 body > main > .section > .non-flexbox {
     background-color: #228B22;
+}
+
+
+
+/* FOOTER */
+
+footer {
+    background-color: #23272A;
+}
+
+footer > .footer * {
+    border: 2px dashed black;
+}
+
+footer > .footer > .references_link {
+    background-color: #F08080;
+}
+
+footer > .footer > .references > .table {
+    border-color: #FFF;
+    background-color: #20B2AA;
+}
+
+footer > section:last-child {
+    border-color: #FFF;
+}
+
+footer > section > .deepest {
+    border-color: #FFF;
+    background-color: #7FFFD4;
+}
+
+footer > section > .deepest > * {
+    border: 2px dashed black;
+    background-color: #FFB6C1;
 }
